@@ -37,6 +37,5 @@ func TestCreate(t *testing.T){
 
     	handler.ServeHTTP(rr, req)
 
-    assert.Equal(t, http.StatusOK, rr.Code)
-    assert.Equal(t, "This is my result", rr.Body.String())
+    assert.Equal(t, http.StatusCreated, rr.Code)
 }

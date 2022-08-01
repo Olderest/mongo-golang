@@ -65,7 +65,7 @@ func (uc UserController) CreateUser(w http.ResponseWriter, r *http.Request){
 
 	u.Id = bson.NewObjectId()
 
-	uc.Create(u, uc.session)
+	uc.UserOperations.Create(u, uc.session)
 
 	uj, err := json.Marshal(u)
 	if err != nil {
